@@ -9,9 +9,28 @@
 
 // Código de escuta Analytics
 
-<script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-UA-12345-6', 'auto');
 ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+// Evento do Contato
+document.getElementById("link_externo").addEventListener("click", entre_em_contato);
+
+function entre_em_contato() {
+}
+// Evento do Download
+document.getElementById("download_pdf").addEventListener("click", download_pdf);
+
+function download_pdf() {
+}
+
+// Evento das imagens
+
+document.getElementById("Lorem").addEventListener("click", ver_mais);
+document.getElementById("Ipsum").addEventListener("click", ver_mais);
+document.getElementById("Dolor").addEventListener("click", ver_mais);
+
+function ver_mais() {
+}
