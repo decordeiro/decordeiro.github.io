@@ -19,18 +19,92 @@ ga('send', 'pageview');
 document.getElementById("link_externo").addEventListener("click", entre_em_contato);
 
 function entre_em_contato() {
+    ga('send', 'event', {
+        eventCategory: 'menu”',
+        eventAction: 'entre_em_contato',
+        eventLabel: 'link_externo'
+      });
 }
 // Evento do Download
 document.getElementById("download_pdf").addEventListener("click", download_pdf);
 
 function download_pdf() {
+    ga('send', 'event', {
+        eventCategory: 'menu”',
+        eventAction: 'download_pdf',
+        eventLabel: 'download_pdf'
+      });
 }
 
 // Evento das imagens
 
-document.getElementById("Lorem").addEventListener("click", ver_mais);
-document.getElementById("Ipsum").addEventListener("click", ver_mais);
-document.getElementById("Dolor").addEventListener("click", ver_mais);
+document.getElementById("Lorem").addEventListener("click", lorem);
+function lorem() {
+    ga('send', 'event', {
+        eventCategory: 'analise”',
+        eventAction: 'ver_mais',
+        eventLabel: 'Lorem'
+      });
+}
 
-function ver_mais() {
+document.getElementById("Ipsum").addEventListener("click", Ipsum);
+function Ipsum() {
+    ga('send', 'event', {
+        eventCategory: 'analise”',
+        eventAction: 'ver_mais',
+        eventLabel: 'Ipsum'
+      });
+}
+
+
+document.getElementById("Dolor").addEventListener("click", Dolor);
+function Dolor() {
+    ga('send', 'event', {
+        eventCategory: 'analise”',
+        eventAction: 'ver_mais',
+        eventLabel: 'Dolor'
+      });
+}
+
+
+// Eventos do form
+
+
+document.getElementById("Nome").addEventListener("change", Nome);
+function Nome() {
+    ga('send', 'event', {
+        eventCategory: 'contato”',
+        eventAction: 'Nome',
+        eventLabel: 'preencheu'
+      });
+}
+
+document.getElementById("email").addEventListener("change", email);
+function Nome() {
+    ga('send', 'event', {
+        eventCategory: 'contato”',
+        eventAction: 'email',
+        eventLabel: 'preencheu'
+      });
+}
+
+document.getElementById("Nome").addEventListener("change", telefone);
+function telefone() {
+    ga('send', 'event', {
+        eventCategory: 'contato”',
+        eventAction: 'telefone',
+        eventLabel: 'preencheu'
+      });
+}
+
+
+// Achei um pouco de overkill colocar o change para a checkbox, porém melhor pecar pelo zelo
+
+document.getElementById("aceito").addEventListener("change", aceito);
+function aceito() {
+    ga('send', 'event', {
+        eventCategory: 'contato”',
+        eventAction: 'aceito',
+        eventLabel: 'preencheu'
+      });
 }
