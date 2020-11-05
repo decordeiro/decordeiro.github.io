@@ -108,3 +108,13 @@ function aceito() {
         eventLabel: 'preencheu'
       });
 }
+
+document.getElementById("contato_form").addEventListener("submit", contato_form);
+
+function contato_form() {
+    ga('send', 'event', {
+        eventCategory: 'contato”',
+        eventAction: 'enviado”',
+        eventLabel: 'enviado”'
+      });
+}
